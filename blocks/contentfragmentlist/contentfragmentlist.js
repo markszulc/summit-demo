@@ -23,7 +23,7 @@ fetch(myurl,{
             cfRaw.forEach(cf => {
                 if(cf["_path"].includes('content/dam/frescopa/en/offers') ) {
                     const cfElem = document.createElement('li', {"itemid": "urn:aemconnection"+cf["_path"], "itemtype": "component"});
-                    cfElem.setAttribute("itemid", "urn:aemconnection"+cf["_path"]+"/jcr:content/data/master");
+                    cfElem.setAttribute("itemid", "urn:aemconnection:"+cf["_path"]+"/jcr:content/data/master");
                     cfElem.setAttribute("itemtype", "reference");
                     cfElem.setAttribute("itemscope", true);
                     cfElem.setAttribute("itemfilter", "cf");
