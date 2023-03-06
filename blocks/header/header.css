@@ -15,7 +15,7 @@ header {
   width: 100%;
   font-size: 15px;
   display: grid;
-  grid: auto-flow / 1fr 80px 623px 148px;
+  grid: auto-flow / 1fr 80px 705px 148px;
 }
 
   .nav-brand{
@@ -27,8 +27,16 @@ header {
 
   }
 
+  .icon {
+    fill: #007bc3;
+  }
+
+  .icon-login .icon {
+    fill: #000000!important;
+
+  }
+
   .icon-logo {
-    fill: #007bc3!important;
     width: 187px;
     height: 44px;
   }
@@ -92,4 +100,12 @@ header {
   .nav-auth p {
     line-height: 0;
     margin-right: 7.5px;
+  }
+
+  .evo-icon__top-lvl {
+    margin-left: 10px;
+  }
+
+  .nav-chevron {
+    padding-top: 6px;
   }

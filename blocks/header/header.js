@@ -116,7 +116,8 @@ export default async function decorate(block) {
         if (navSection.querySelector('ul')) {
           navSection.classList.add('nav-drop');
           const downchevron = document.createElement("div");
-          downchevron.innerHTML = '<p>v</p>';
+          downchevron.classList.add('nav-chevron');
+          downchevron.innerHTML = '<evo-icon name="chevron-down" class="evo-icon__top-lvl" fill="blue"><!----><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" class="icon icon-md icon-fill-blue icon-stroke-text " style="" viewBox="0 0 24 24"><!--?lit$036953911$--><path class="icon-chevron-down__arrow" d="M7.343,5.718a.808.808,0,0,1,.241.574V6.7a.83.83,0,0,1-.241.574L1.716,12.836a.551.551,0,0,1-.777,0l-.777-.769a.527.527,0,0,1,0-.758L5.033,6.5.162,1.688a.538.538,0,0,1,0-.769L.939.16a.551.551,0,0,1,.777,0Z" transform="translate(18.498 8.208) rotate(90)"></path></svg></evo-icon>';
           navSection.append(downchevron);
         }
         navSection.addEventListener('click', () => {
