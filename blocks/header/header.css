@@ -1,3 +1,7 @@
+header {
+  grid-area: header;
+}
+
 .header p {
   margin: 0px;
 }

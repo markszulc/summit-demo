@@ -32,12 +32,27 @@ function buildHeroBlock(main) {
 }
 
 /**
+ * Builds sidebar block and prepends to main in a new section.
+ * @param {Element} main The container element
+ */
+function buildSidebarBlock(main) {
+  const section = document.createElement('sidebar');
+  section.innerHTML = '<ul><li><img src="icons/bullseye.svg">Plan</li><li><img src="icons/invest.svg">Invest</li><li><img src="icons/insure.svg">Insure</li><li><img src="icons/retire.svg">Retire</li><li><img src="icons/help.svg">Help</li></ul>';
+  section.className = 'sidebar-wrapper';
+  const parentdiv = document.body;
+  const header = document.querySelector('header');
+  header.insertAdjacentElement("afterend", section);
+}
+
+
+/**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
  */
 function buildAutoBlocks(main) {
   try {
     buildHeroBlock(main);
+    buildSidebarBlock(main);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);
