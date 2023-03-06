@@ -16,14 +16,14 @@ fetch(myurl,{
     console.log(data);
     if(data){
         const cfList = document.createElement("ul");
-        cfList.setAttribute('itemid','urn:aemconnection:/content/dam/frescopa/en/offers');
-        cfList.setAttribute("itemtype", "container");
+        // cfList.setAttribute('itemid','urn:aemconnection:/content/dam/frescopa/en/offers');
+        // cfList.setAttribute("itemtype", "container");
         const cfRaw = data.data.offerList.items;
         if(cfRaw && cfRaw.length > 0) {
             cfRaw.forEach(cf => {
                 if(cf["_path"].includes('content/dam/frescopa/en/offers') ) {
                     const cfElem = document.createElement('li', {"itemid": "urn:aemconnection"+cf["_path"], "itemtype": "component"});
-                    cfElem.setAttribute("itemid", "urn:aemconnection"+cf["_path"]);
+                    cfElem.setAttribute("itemid", "urn:aemconnection"+cf["_path"]+"/jcr:content/data/master");
                     cfElem.setAttribute("itemtype", "reference");
                     cfElem.setAttribute("itemscope", true);
                     cfElem.setAttribute("itemfilter", "cf");
