@@ -15,8 +15,9 @@
   order: 0;
 }
 
-.columns > div > .columns-img-col img {
+.columns > div img {
   display: block;
+  border-bottom-right-radius: 90px;
 }
 
 @media (min-width: 900px) {

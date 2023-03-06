@@ -16,7 +16,7 @@ main .hero {
 }
 
 main .hero h1 {
-  max-width: 700px;
+  max-width: 708px;
   color: #1a1d1e;
   font-family: Pru-Modern,sans-serif;
   font-weight: 700;
@@ -25,7 +25,7 @@ main .hero h1 {
 }
 
 main .hero h4 {
-  max-width: 700px;
+  max-width: 708px;
   font-size: 1.7rem;
   letter-spacing: -0.17px;
   font-weight: 400;
@@ -53,11 +53,12 @@ main .hero img {
 }
 
 main .hero .cta {
+  box-sizing: border-box;
   background-color: #ffd200;;
   border-radius: 30rem  ;
   color: #1a1d1e;
   font-size: 14px;
-  font-weight: 600px;
+  font-weight: 600;
   letter-spacing: 0.6px;
   max-width: 240px;
   height: 48px;
