@@ -147,5 +147,25 @@ export default async function decorate(block) {
     navWrapper.className = 'nav-wrapper';
     navWrapper.append(nav);
     block.append(navWrapper);
+
+    const sidebarMeta = getMetadata('sidebar');
+    const sidebarPath = sidebarMeta ? new URL(sidebarMeta).pathname : '/sidebar';
+    const sidebarresp = await fetch(`${sidebarPath}.plain.html`);
+
+    if (sidebarresp.ok) {
+      const html = await resp.text();
+  
+      // decorate sidebar DOM
+      const sidebar = document.createElement('sidebar');
+      sidebar.id = 'sidebar';
+      sidebar.innerHTML = html;
+    }
+
+    decorateIcons(sidebar);
+    const sidebarWrapper = document.createElement('div');
+    sidebarWrapper.className = 'sidebar-wrapper';
+    sidebarWrapper.append(nav);
+    block.append(sidebarWrapper);
+  
   }
 }
