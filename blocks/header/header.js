@@ -153,7 +153,7 @@ export default async function decorate(block) {
     const sidebarresp = await fetch(`${sidebarPath}.plain.html`);
 
     if (sidebarresp.ok) {
-      const html = await resp.text();
+      const html = await sidebarresp.text();
   
       // decorate sidebar DOM
       const sidebar = document.createElement('sidebar');
