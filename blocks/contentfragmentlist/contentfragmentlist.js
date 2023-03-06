@@ -16,21 +16,23 @@ fetch(myurl,{
     console.log(data);
     if(data){
         const cfList = document.createElement("ul");
-        cfList.setAttribute('itemid','urn:aemconnection:/content/example/list');
+        cfList.setAttribute('itemid','urn:aemconnection:/content/dam/frescopa/en/offers');
         cfList.setAttribute("itemtype", "container");
         const cfRaw = data.data.offerList.items;
         if(cfRaw && cfRaw.length > 0) {
             cfRaw.forEach(cf => {
-                const cfElem = document.createElement('li', {"itemid": "urn:aemconnection"+cf["_path"]+"/jcr:content/data", "itemtype": "component"});
-                cfElem.setAttribute("itemid", "urn:aemconnection"+cf["_path"]+"/jcr:content/data");
-                cfElem.setAttribute("itemtype", "component");
-                cfElem.setAttribute("itemscope", true);
-                const headline = document.createElement('p', {"itemprop": "headline", "itemtype": "text"});
-                headline.setAttribute("itemprop", "headline");
-                headline.setAttribute("itemtype", "text");
-                headline.textContent = cf.headline;
-                cfElem.appendChild(headline);
-                cfList.appendChild(cfElem);
+                if(cf["_path"].includes('content/dam/frescopa/en/offers') ) {
+                    const cfElem = document.createElement('li', {"itemid": "urn:aemconnection"+cf["_path"]+"/jcr:content/data", "itemtype": "component"});
+                    cfElem.setAttribute("itemid", "urn:aemconnection"+cf["_path"]+"/jcr:content/data");
+                    cfElem.setAttribute("itemtype", "component");
+                    cfElem.setAttribute("itemscope", true);
+                    const headline = document.createElement('p', {"itemprop": "headline", "itemtype": "text"});
+                    headline.setAttribute("itemprop", "headline");
+                    headline.setAttribute("itemtype", "text");
+                    headline.textContent = cf.headline;
+                    cfElem.appendChild(headline);
+                    cfList.appendChild(cfElem);
+                }
             });
             block.append(cfList);
  
