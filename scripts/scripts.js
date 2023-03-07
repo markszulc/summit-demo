@@ -42,7 +42,7 @@ function buildHeroBlock(main) {
  */
 function buildSidebarBlock(main) {
   const section = document.createElement('sidebar');
-  section.innerHTML = '<ul><li><img src="icons/bullseye.svg">Plan</li><li><img src="icons/invest.svg">Invest</li><li><img src="icons/insure.svg">Insure</li><li><img src="icons/retire.svg">Retire</li><li><img src="icons/help.svg">Help</li></ul>';
+  section.innerHTML = '<ul><li><img src="icons/bullseye.svg" role="presentation">Plan</li><li><img src="icons/invest.svg" role="presentation">Invest</li><li><img src="icons/insure.svg" role="presentation">Insure</li><li><img src="icons/retire.svg" role="presentation">Retire</li><li><img src="icons/help.svg" role="presentation">Help</li></ul>';
   section.className = 'sidebar-wrapper';
   const parentdiv = document.body;
   const header = document.querySelector('header');
