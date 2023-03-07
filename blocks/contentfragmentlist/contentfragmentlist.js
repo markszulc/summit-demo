@@ -34,21 +34,23 @@ export default function decorate(block) {
             cfListBlock.setAttribute("class", "adventure-items");
             cfList.forEach(cf => {
                 let ctaUrl = '';
-                let imageUrl = ''
+                let imageUrl = '';
+                let description = '';
                 // if(cf.ctaUrl !== null) {
                 //     ctaUrl = cf.ctaUrl["_publishUrl"];
                 // }
                 if(cf.heroImage !== null) {
                     imageUrl = cf.heroImage["_publishUrl"];
-                    console.log(cf.heroImage)
-                
+                    //console.log(cf.heroImage)
+                    description = cf.main["plaintext"];
+                    //console.log(description);
                     const cfElem = document.createElement('li', {"class": "adventure-item"});
                     cfElem.setAttribute("class", "adventure-item");
                     cfElem.setAttribute("itemscope", "");
                     cfElem.setAttribute("itemid", "urn:aemconnection:" + cf["_path"] + "/jcr:content/data/master");
                     cfElem.setAttribute("itemtype", "reference");
                     cfElem.setAttribute("itemfilter", "cf");
-                    const offer = '<a href="'+ctaUrl+'"><img class="adventure-item-image" src="'+imageUrl+'" alt="'+cf.headline+'" itemprop="primaryImage" itemtype="image"></a><div class="adventure-item-title" itemprop="headline" itemtype="text">'+cf.headline+'</div>';
+                    const offer = '<a href="'+ctaUrl+'"><img class="adventure-item-image" src="'+imageUrl+'" alt="'+cf.headline+'" itemprop="primaryImage" itemtype="image"></a><div class="adventure-item-title" itemprop="headline" itemtype="text">'+cf.headline+'</div><div class="adventure-item-desc" itemprop="main" itemtype="text">'+description+'</div>';
                     cfElem.innerHTML = offer;
                     cfListBlock.appendChild(cfElem);
                 }
