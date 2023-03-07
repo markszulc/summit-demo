@@ -20,7 +20,7 @@ li {
     width: 100%;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: normal;
+    justify-content: space-between;
 }
 
 .article-item-image {
@@ -33,9 +33,13 @@ li {
 }
 
 .article-item-title {
-    font-weight: 700;
-    font-size: 16px;
-    margin-bottom: 5px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 26px;
+    margin-bottom: 1em;
+    color: #07639d;
+    font-family: PruModern-BoldSemiCon,Arial,Helvetica Neue,Helvetica,sans-serif;
+    }
 }
 
 .article-item-desc {
