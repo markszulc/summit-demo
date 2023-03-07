@@ -31,7 +31,7 @@ export default function decorate(block) {
         if(data.data) {
             const cfList = data.data.articleList.items;
             const cfListBlock = document.createElement('ul');
-            cfListBlock.setAttribute("class", "adventure-items");
+            cfListBlock.setAttribute("class", "article-items");
             cfList.forEach(cf => {
                 let ctaUrl = '';
                 let imageUrl = '';
@@ -44,13 +44,13 @@ export default function decorate(block) {
                     //console.log(cf.heroImage)
                     description = cf.main["plaintext"];
                     //console.log(description);
-                    const cfElem = document.createElement('li', {"class": "adventure-item"});
-                    cfElem.setAttribute("class", "adventure-item");
+                    const cfElem = document.createElement('li', {"class": "article-item"});
+                    cfElem.setAttribute("class", "article-item");
                     cfElem.setAttribute("itemscope", "");
                     cfElem.setAttribute("itemid", "urn:aemconnection:" + cf["_path"] + "/jcr:content/data/master");
                     cfElem.setAttribute("itemtype", "reference");
                     cfElem.setAttribute("itemfilter", "cf");
-                    const offer = '<a href="'+ctaUrl+'"><img class="adventure-item-image" src="'+imageUrl+'" alt="'+cf.headline+'" itemprop="primaryImage" itemtype="image"></a><div class="adventure-item-title" itemprop="headline" itemtype="text">'+cf.headline+'</div><div class="adventure-item-desc" itemprop="main" itemtype="text">'+description+'</div>';
+                    const offer = '<a href="'+ctaUrl+'"><img class="article-item-image" src="'+imageUrl+'" alt="'+cf.headline+'" itemprop="primaryImage" itemtype="image"></a><div class="article-item-title" itemprop="headline" itemtype="text">'+cf.headline+'</div><div class="article-item-desc" itemprop="main" itemtype="richtext">'+description+'</div>';
                     cfElem.innerHTML = offer;
                     cfListBlock.appendChild(cfElem);
                 }

@@ -1,4 +1,4 @@
-.adventure-item {
+.article-item {
     flex-basis: 240px;
     margin: 0 0 2rem;
     padding-right: 14px;
@@ -8,11 +8,11 @@ li {
     display: list-item;
 }
 
-.adventure-item > a {
+.article-item > a {
     text-decoration: none;
 }
 
-.adventure-items {
+.article-items {
     display: flex;
     list-style: none;
     margin-top: 1em;
@@ -23,7 +23,7 @@ li {
     justify-content: normal;
 }
 
-.adventure-item-image {
+.article-item-image {
     width: 100%;
     height: 200px;
     object-fit: cover;
@@ -32,8 +32,17 @@ li {
     margin-bottom: 7px;
 }
 
-.adventure-item-title {
+.article-item-title {
     font-weight: 700;
     font-size: 16px;
     margin-bottom: 5px;
+}
+
+.article-item-desc {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.42;
+    margin-bottom: 5px;
+    color: #1a1d1e;
+    font-family: OpenSans-Regular,Arial,Helvetica Neue,Helvetica,sans-serif;
 }
