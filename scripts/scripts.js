@@ -1,6 +1,7 @@
 import {
   sampleRUM,
   buildBlock,
+  getMetadata,
   loadHeader,
   loadFooter,
   decorateButtons,
