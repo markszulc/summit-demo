@@ -83,6 +83,15 @@ export function decorateMain(main) {
  * @param {Element} doc The container element
  */
 async function loadEager(doc) {
+
+  // load experiments
+  const experiment = toClassName(getMetadata('experiment'));
+  const instantExperiment = getMetadata('instant-experiment');
+  if (instantExperiment || experiment) {
+    const { runExperiment } = await import('./experimentation/index.js');
+    await runExperiment(experiment, instantExperiment, EXPERIMENTATION_CONFIG);
+  }
+  
   document.documentElement.lang = 'en';
   decorateTemplateAndTheme();
   const main = doc.querySelector('main');
