@@ -299,7 +299,8 @@ sidebar li img {
 }
 
 
-isplay: swap;
+@font-face {
+    font-display: swap;
     font-family: Opensans-Regular;
     font-style: normal;
     font-weight: 700;
