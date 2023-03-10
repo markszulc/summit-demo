@@ -29,11 +29,16 @@ function buildHeroBlock(main) {
   const cta = document.createElement('p');
   cta.className = "cta";
   cta.innerHTML = 'Schedule a consultation';
+  const herocontent = document.createElement("div");
+  herocontent.classList.add('banner-content');
+  herocontent.append(h1);
+  herocontent.append(subhead);
+  herocontent.append(cta);
   
   // eslint-disable-next-line no-bitwise
   if (h1 && picture && (h1.compareDocumentPosition(picture) & Node.DOCUMENT_POSITION_PRECEDING)) {
     const section = document.createElement('div');
-    section.append(buildBlock('hero', { elems: [picture, h1, subhead, cta] }));
+    section.append(buildBlock('hero', { elems: [picture, herocontent] }));
     main.prepend(section);
   }
 }
