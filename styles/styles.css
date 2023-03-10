@@ -297,3 +297,51 @@ sidebar li img {
     padding-bottom: 4px;
     filter: invert(1) opacity(0.7);
 }
+
+
+isplay: swap;
+    font-family: Opensans-Regular;
+    font-style: normal;
+    font-weight: 700;
+    src: local("open sans bold"),local("opensans-bold"),url(https://cdn.pficdn.com/fonts/1.0.6/open-sans-v15-latin-700.woff2) format("woff2"),url(https://cdn.pficdn.com/fonts/1.0.6/open-sans-v15-latin-700.woff) format("woff")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Opensans-Regular;
+    font-style: normal;
+    font-weight: 400;
+    src: local("open sans regular"),local("opensans-regular"),url(https://cdn.pficdn.com/fonts/1.0.6/open-sans-v15-latin-regular.woff2) format("woff2"),url(https://cdn.pficdn.com/fonts/1.0.6/open-sans-v15-latin-regular.woff) format("woff")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Opensans-Regular;
+    font-style: normal;
+    font-weight: 600;
+    src: local("open sans semibold"),local("opensans-semibold"),url(https://cdn.pficdn.com/fonts/1.0.6/open-sans-v17-latin-600.woff2) format("woff2"),url(https://cdn.pficdn.com/fonts/1.0.6/open-sans-v17-latin-600.woff) format("woff")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Pru-Modern;
+    font-style: normal;
+    font-weight: 200;
+    src: local("PrudentialModern Light"),url(https://cdn.pficdn.com/fonts/1.0.6/prudentialmodern-light-webfont.woff2) format("woff2"),url(https://cdn.pficdn.com/fonts/1.0.6/prudentialmodern-light-webfont.woff) format("woff")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Pru-Modern;
+    font-style: normal;
+    font-weight: 700;
+    src: local("PrudentialModern Medium Bold"),url(https://cdn.pficdn.com/fonts/1.0.6/prudentialmodern-bold-webfont.woff2) format("woff2"),url(https://cdn.pficdn.com/fonts/1.0.6/prudentialmodern-bold-webfont.woff) format("woff")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Pru-Modern;
+    font-style: normal;
+    font-weight: 400;
+    src: local("PrudentialModern Medium"),url(https://cdn.pficdn.com/fonts/1.0.6/prudentialmodern-medium-webfont.woff2) format("woff2"),url(https://cdn.pficdn.com/fonts/1.0.6/prudentialmodern-medium-webfont.woff) format("woff")
+}
