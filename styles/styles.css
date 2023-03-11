@@ -59,6 +59,10 @@ body {
   line-height: 1.5;
   color: var(--text-color);
   background-color: var(--background-color);
+
+}
+
+.prudentialgrid {
   display: grid;
   grid-template-columns: 80px 1.8fr; 
   grid-template-rows: 80px 1fr 2000px; 

@@ -158,6 +158,8 @@ function loadDelayed() {
 }
 
 async function loadPage() {
+  const prubody = document.querySelector('body');
+  prubody.classList.add('prudentialgrid');
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
