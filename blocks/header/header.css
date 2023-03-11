@@ -15,7 +15,7 @@ header {
   width: 100%;
   font-size: 15px;
   display: grid;
-  grid: auto-flow / 1fr 80px 705px 148px;
+  grid: auto-flow / 1fr 80px 715px 148px;
 }
 
   .nav-brand{

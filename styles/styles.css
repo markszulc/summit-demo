@@ -17,7 +17,7 @@
   --background-color: #fff;
   --overlay-background-color: #eee;
   --highlight-background-color: #ccc;
-  --text-color: #000;
+  --text-color:  #1a1d1e;
 
   /* fonts */
   --body-font-family: Opensans-Regular,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
@@ -25,9 +25,9 @@
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
   /* body sizes */
-  --body-font-size-m: 1.5rem;
-  --body-font-size-s: 1.5rem;
-  --body-font-size-xs: 1.5rem;
+  --body-font-size-m: 15px;
+  --body-font-size-s: 15px;
+  --body-font-size-xs: 15px;
 
   /* heading sizes */
   --heading-font-size-xxl: 48px;
@@ -84,15 +84,31 @@ h4, h5, h6 {
 }
 
 h1 { font-size: var(--heading-font-size-xxl) }
-h2 { font-size: var(--heading-font-size-xl) }
+h2 { 
+  font-family: Pru-Modern, sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: 0.38px;
+  line-height: 42.75px;
+ }
 h3 { font-size: var(--heading-font-size-l) }
 h4 { font-size: var(--heading-font-size-m) }
-h5 { font-size: var(--heading-font-size-s) }
+h5 { 
+  font-family: Pru-Modern, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.18px;
+  line-height: 20.25px;
+}
 h6 { font-size: var(--heading-font-size-xs) }
 
 p, dl, ol, ul, pre, blockquote {
   margin-top: 1em;
   margin-bottom: 1em;
+}
+
+p {
+  letter-spacing: -0.15px;
 }
 
 hr {
@@ -234,7 +250,7 @@ main .section {
 
 @media (min-width: 900px) {
   .section > div {
-    max-width: 1200px;
+    max-width: 1238px;
     margin: auto;
   }
 }

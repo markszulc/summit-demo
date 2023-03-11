@@ -6,6 +6,9 @@ main .hero-container > div {
   
 main .hero-container {
   padding: 0;
+  background-color:  rgba(0, 123, 195, 0.92);
+  background-color: rgba(0, 123, 195, 0.7);
+  background: linear-gradient(90deg, rgba(240, 249, 255, 0.92) 0%, rgba(240, 249, 255, 0.7) 60%, rgba(240, 249, 255, 0) 70%);
 }
   
 main .hero {
@@ -53,17 +56,29 @@ main .hero img {
 }
 
 main .hero .cta {
-  box-sizing: border-box;
   background-color: #ffd200;;
-  border-radius: 30rem  ;
+  border-radius: 30rem;
   color: #1a1d1e;
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.6px;
-  max-width: 240px;
-  height: 48px;
-  padding: 12px 24px;
+  max-width: 217px;
+  padding: 10px 24px 10px 24px;
+  display: block;
 }
+
+main .hero .cta .icon {
+  fill: #1a1d1e;
+}
+
+main .hero .cta .evo-button__content {
+  display: flex;
+  align-items: center!important;
+}
+main .hero .cta .evo-button__content__icon {
+  margin-left: 10px;
+}
+
 
 .banner-content {
   max-width: 1200px;
