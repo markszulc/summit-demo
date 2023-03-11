@@ -196,7 +196,7 @@ const createOutput = (fd) => {
   const output = document.createElement('output');
   output.name = fd.Name;
   output.id = fd.Id;
-  output.innerText = (fd.Value);
+  output.value = ((+fd.Value)?.toLocaleString());
   output.dataset.value = fd.Value;
   return output;
 };

@@ -26,15 +26,15 @@ main .form form fieldset legend {
     line-height: 1.5;
     color: var(--form-color);
 }
+main .form form .form-range-wrapper  output {
+    font-size: 20px;
+}
 main .form form output {
     font-size: 36px;
     line-height: 44px;
     font-weight: 800;
     color: var(--form-color);
     
-}
-main .form form output::before {
-    content: "$";
 }
 .form-fieldset-wrapper {
     display: grid;
@@ -72,6 +72,7 @@ main .form h3 {
 
 main .form input[type='range'] {
     height: 5px;
+    accent-color: var(--form-color);
 }
 main .form input,
 main .form textarea,
@@ -238,15 +239,33 @@ main .form .button {
     color: var(--form-color);
 }
 
+.range-max,
+.range-min {
+    font-size: 14px;
+    line-height: 22px;
+    display: inline-block;
+    color: #494f50;
+    margin-top: 16px;
+}
+
 .range-max {
     float: right;
 } 
 
+.range-bubble {
+    position: relative;
+    left: calc(var(--current-steps)*100% / (var(--total-steps) + 1));
+  }
+
+.form-terms > div > .range-bubble::after,
 .form-terms > div > .range-min::after,
 .form-terms > div > .range-max::after {
-    content: " months";
+    content: " years";
 }
 
+.form-rate > output::before,
+.form-emi > output::before,
+.form-total > output::before,
 .form-loanAmount > div > .range-min::before,
 .form-loanAmount > div > .range-max::before {
     content: "$";
@@ -291,18 +310,6 @@ input[type="range"] {
     left: calc(var(--current-steps)*100% / (var(--total-steps) + 1));
     display: inline-block;
     padding-bottom: 12px;
-  }
-  .range-min,
-  .range-max {
-    font-family: 'Open Sans Regular', Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    line-height: 22px;
-    color: #494f50;
-    margin-top: 16px;
-    display: inline-block;
-  }
-  .range-max {
-    float: right;
   }
   .range-min-max::after {
     content: var(--max-value);

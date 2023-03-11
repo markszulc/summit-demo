@@ -20,21 +20,21 @@ async function updateBubble(input, element, values) {
     div.className = 'range-widget-wrapper';
   
     clonedInput.addEventListener('input', (e) => {
-      //updateBubble(e.target, div);
+      updateBubble(e.target, div);
     });
 
-    const hover = document.createElement('span');
+    const hover = document.createElement('output');
     hover.className = 'range-bubble';
     const rangeMinEl = document.createElement('span');
     rangeMinEl.className = 'range-min';
     const rangeMaxEl = document.createElement('span');
     rangeMaxEl.className = 'range-max';
-    ///div.appendChild(hover);
+    div.appendChild(hover);
     div.appendChild(clonedInput);
     div.appendChild(rangeMinEl);
     div.appendChild(rangeMaxEl);
     rangeMinEl.innerText = clonedInput.min;
     rangeMaxEl.innerText = clonedInput.max;
-   // updateBubble(input, div);
+    updateBubble(input, div);
     return div;
   }

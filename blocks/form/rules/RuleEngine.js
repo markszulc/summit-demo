@@ -82,7 +82,7 @@ export default class RuleEngine {
       const { displayFormat } = element.dataset;
       if (element.tagName === 'OUTPUT') {
         //const formatFn = formatFns[displayFormat] || ((x) => x);
-        element.value = (value);
+        element.value = (value?.toLocaleString());
         element.dataset.value = value;
       } else {
         element.value = value;
