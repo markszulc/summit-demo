@@ -6,8 +6,6 @@ main .hero-container > div {
   
 main .hero-container {
   padding: 0;
-  background-color:  rgba(0, 123, 195, 0.92);
-  background-color: rgba(0, 123, 195, 0.7);
   background: linear-gradient(90deg, rgba(240, 249, 255, 0.92) 0%, rgba(240, 249, 255, 0.7) 60%, rgba(240, 249, 255, 0) 70%);
 }
   
@@ -81,6 +79,6 @@ main .hero .cta .evo-button__content__icon {
 
 
 .banner-content {
-  max-width: 1200px;
+  max-width: 1238px;
   margin: auto;
 }

@@ -1,0 +1,64 @@
+.calltoaction {
+     background: linear-gradient(120deg, rgba(232, 247, 251, 1) 0%, rgba(211, 235, 249, 1) 60%, rgba(232, 247, 251, 1) 100%);
+    color: #fff;
+    height: 150px;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.calltoaction-wrapper {
+    max-width: 100%  !important;
+
+}
+
+.calltoaction .container {
+    max-width: 1238px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+
+}
+
+.calltoaction .container .ctaheadline {
+    font-family: Pru-Modern,sans-serif;
+    font-weight: 700;
+    line-height: 1.125;
+    color: #1a1d1e;
+    font-size: 38px;
+}
+
+.evo-button {
+    color: #fff;
+    position: relative;
+    box-sizing: content-box;
+    display: inline-block;
+    padding: 5px 0px 5px 5px;
+    background-color:#06c;
+    border: none;
+    border-radius: 3rem;
+}
+
+.evo-button__inner-wrapper {
+    padding: 12px 24px ;
+}
+    
+.evo-button a {
+    color: #fff;
+}
+
+.evo-button__content__icon svg {
+     fill: #fff;
+}
+
+.ctabtn {
+    margin-left: 50px;
+    letter-spacing: 0.6px;
+    line-height: 21px;
+    font-weight: 600;
+    padding-top: 5px;
+
+}
