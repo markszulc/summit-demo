@@ -19,7 +19,7 @@ export default function decorate(block) {
     console.log(cfPersistedQuery.trim()+"?ts="+Math.random()*1000);
 
     const myurl = "https://author-p55117-e571178.adobeaemcloud.com/graphql/execute.json/frescopa/ArticleList";
-    token = "Bearer eyJhbGciOiJSUzI1NiIsIng1dSI6Imltc19uYTEta2V5LWF0LTEuY2VyIiwia2lkIjoiaW1zX25hMS1rZXktYXQtMSIsIml0dCI6ImF0In0.eyJpZCI6IjE2NzgxODg2OTI0NzVfM2VlMzlhNzMtYjI0Mi00NWZiLWFiOWUtZDE2YmQyZmFmZGQ4X3V3MiIsInR5cGUiOiJhY2Nlc3NfdG9rZW4iLCJjbGllbnRfaWQiOiJkZXYtY29uc29sZS1wcm9kIiwidXNlcl9pZCI6IjgyMUQxRjgwNjMxQzEyQTQwQTQ5NUM3REA3ZTMzMWY4MzYzMWMwY2NhNDk1Y2RkLmUiLCJzdGF0ZSI6IkFhcU1BRjloZ1JaU1Rqa0pMT0dRdUZkUiIsImFzIjoiaW1zLW5hMSIsImFhX2lkIjoiQzY1REM4QTE1NDg5RTgyMDBBNEM5OEJDQGFkb2JlLmNvbSIsImN0cCI6MCwiZmciOiJYSUQ3R0ZQRlhQRjdJUDYyR09RVjNYUUFSUT09PT09PSIsInNpZCI6IjE2Nzc4MzUzOTIzMDdfZmQ4MTA5NTMtZTY0MS00NWY5LWJhNGUtOTk5ODNiZTY4ZDU0X3VlMSIsInJ0aWQiOiIxNjc4MTg4NjkyNDc2X2QyOGU1MTc5LWE5ZmQtNGFjOS04MjQ4LTQ2ODQyYmJlMjc3Nl91dzIiLCJtb2kiOiJjYzc4YjA2NiIsInBiYSI6Ik1lZFNlY05vRVYsTG93U2VjIiwicnRlYSI6IjE2NzkzOTgyOTI0NzYiLCJleHBpcmVzX2luIjoiODY0MDAwMDAiLCJjcmVhdGVkX2F0IjoiMTY3ODE4ODY5MjQ3NSIsInNjb3BlIjoiQWRvYmVJRCxvcGVuaWQscmVhZF9vcmdhbml6YXRpb25zLGFkZGl0aW9uYWxfaW5mby5wcm9qZWN0ZWRQcm9kdWN0Q29udGV4dCJ9.AcgcCMB1n4yVtVHB93tkrKqvBdipmUSguQEJDRdwtoE0J9gvGfR3LMDR4GJcGX77g76X5_U9pnxWcfB0yBkvlBz-qOSsjto1u6dVeSUwEmTJKPs2YDRj_s-TsXnCAnr-6HIgv1wQi31YnAb8tRehG9crDfnpXIsc4yYpx_wmH3asvyvWqeITCPgOLe7JiCplwIErQlW9Te7CVZeM7kpoRouwYQTr_6DLub39OawnIMPe3Ab67C7J9JM6STzdzfSfrf4C2V3E-xqetL1QdYalLyzIwrbnwPP8UJgpAF7BCXTiD-5Hd9dUYgoifhpALTKcsB5nTqARqAGG4zsRA6ELQA";
+    token = "Bearer eyJhbGciOiJSUzI1NiIsIng1dSI6Imltc19uYTEta2V5LWF0LTEuY2VyIiwia2lkIjoiaW1zX25hMS1rZXktYXQtMSIsIml0dCI6ImF0In0.eyJpZCI6IjE2Nzg1MTE5MzczODZfYzMwY2ZhYWItOWUxMi00ZmE0LWI2MDItYTQzMjJkZDc1MzM1X3V3MiIsInR5cGUiOiJhY2Nlc3NfdG9rZW4iLCJjbGllbnRfaWQiOiJkZXYtY29uc29sZS1wcm9kIiwidXNlcl9pZCI6IjgyMUQxRjgwNjMxQzEyQTQwQTQ5NUM3REA3ZTMzMWY4MzYzMWMwY2NhNDk1Y2RkLmUiLCJzdGF0ZSI6InQ3MXl0RFFQMXp3SU5USFloZmRHMGh6TyIsImFzIjoiaW1zLW5hMSIsImFhX2lkIjoiQzY1REM4QTE1NDg5RTgyMDBBNEM5OEJDQGFkb2JlLmNvbSIsImN0cCI6MCwiZmciOiJYSU9QNEZQRlhQTjdNUDYyR09RVjNYUUFGND09PT09PSIsInNpZCI6IjE2Nzg1MTE5MDEyOTRfZWRkMGRhYzYtOWEzZC00MWE3LTk3NGItNDdlZmIwOGZlNTQ5X3VlMSIsInJ0aWQiOiIxNjc4NTExOTM3Mzg2X2Q5N2RiYTM3LTE0MzAtNDg2NS1hOWYwLTI1ZWE5MmFiN2IyNV91dzIiLCJtb2kiOiI1MDUzOTExMSIsInBiYSI6Ik1lZFNlY05vRVYsTG93U2VjIiwicnRlYSI6IjE2Nzk3MjE1MzczODYiLCJleHBpcmVzX2luIjoiODY0MDAwMDAiLCJzY29wZSI6IkFkb2JlSUQsb3BlbmlkLHJlYWRfb3JnYW5pemF0aW9ucyxhZGRpdGlvbmFsX2luZm8ucHJvamVjdGVkUHJvZHVjdENvbnRleHQiLCJjcmVhdGVkX2F0IjoiMTY3ODUxMTkzNzM4NiJ9.EwCLZRoF1PaxwjxtyS4EGfXaqImHbo0RNNfYQXLdp4mitVk6mjVDj62CdATul9qYMoQPnWXjemSMibGDDZx8QG07-xwW91ceivWTVtBN4nzc_KQhU0Afzkn4zfQW7PbZHcriJtR6osDDDBv__GN7-krrN5ZDrL3kvAFg1ywa93zWdPrnnKfZGbAwycrb7lXwvoouf-dic9Ulji__Nzmrfb7msNbN0p9L1-knaIKUvieO1l5o3obxEDPHovM7GVLsiDcPUCO2xrppDtz2RGlru2HURx-LeNbpZt3QqRYcK9beUiXm2JDO0KcVU-qCtIMtpMUHgbO61-wD4tmhiuEfpQ";
     options = {headers: {
         "authorization": token
     }};
@@ -50,7 +50,7 @@ export default function decorate(block) {
                     cfElem.setAttribute("itemid", "urn:aemconnection:" + cf["_path"] + "/jcr:content/data/master");
                     cfElem.setAttribute("itemtype", "reference");
                     cfElem.setAttribute("itemfilter", "cf");
-                    const offer = '<a href="'+ctaUrl+'"><img class="article-item-image" src="'+imageUrl+'" alt="'+cf.headline+'" itemprop="primaryImage" itemtype="media"></a><div class="article-item-title" itemprop="headline" itemtype="text">'+cf.headline+'</div><div class="article-item-desc" itemprop="main" itemtype="richtext">'+description+'</div>';
+                    const offer = '<a href="'+ctaUrl+'"><img class="article-item-image" src="'+imageUrl+'" alt="'+cf.headline+'" itemprop="primaryImage" itemtype="media"></a><div class="article-item-title" itemprop="headline" itemtype="text"><h5>'+cf.headline+'</h5></div><div class="article-item-desc" itemprop="main" itemtype="richtext">'+description+'</div>';
                     cfElem.innerHTML = offer;
                     cfListBlock.appendChild(cfElem);
                 }
@@ -60,41 +60,4 @@ export default function decorate(block) {
             block.append(cfListBlock);
         }
     });
-
-// fetch(myurl,{
-//     headers:{
-//         "Content-Type" : "application/json",
-//         "authorization" : "Bearer " + accessToken
-//     },
-
-// }).then((response) => response.json())
-// .then((data) => {
-//     console.log(data);
-//     if(data){
-//         const cfList = document.createElement("ul");
-//         // cfList.setAttribute('itemid','urn:aemconnection:/content/dam/frescopa/en/offers');
-//         // cfList.setAttribute("itemtype", "container");
-//         const cfRaw = data.data.articleList.items;
-//         if(cfRaw && cfRaw.length > 0) {
-//             cfRaw.forEach(cf => {
-//                 if(cf["_path"].includes('content/dam/frescopa/en/articles') ) {
-//                     const cfElem = document.createElement('li', {"itemid": "urn:aemconnection"+cf["_path"], "itemtype": "component"});
-//                     cfElem.setAttribute("itemid", "urn:aemconnection:"+cf["_path"]+"/jcr:content/data/master");
-//                     cfElem.setAttribute("itemtype", "reference");
-//                     cfElem.setAttribute("itemscope", true);
-//                     cfElem.setAttribute("itemfilter", "cf");
-//                     const headline = document.createElement('p', {"itemprop": "headline", "itemtype": "text"});
-//                     headline.setAttribute("itemprop", "headline");
-//                     headline.setAttribute("itemtype", "text");
-//                     headline.textContent = cf.headline;
-//                     cfElem.appendChild(headline);
-//                     cfList.appendChild(cfElem);
-//                 }
-//             });
-//             block.append(cfList);
- 
-//         }
-//     }
-
-// });
 }

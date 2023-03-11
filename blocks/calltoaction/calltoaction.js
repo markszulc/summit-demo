@@ -1,6 +1,5 @@
 export default function decorate(block) {
     const calltoaction = block.querySelector('div');
-    console.log(calltoaction.innerHTML);
     calltoaction.parentNode.removeChild(calltoaction);
     calltoaction.classList.add('ctaheadline');
     const container = document.createElement('div');

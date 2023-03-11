@@ -30,6 +30,7 @@ li {
     object-position: center;
     overflow: hidden;
     margin-bottom: 7px;
+    border-bottom-right-radius: 90px;
 }
 
 .article-item-title {

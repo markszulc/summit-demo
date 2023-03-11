@@ -61,7 +61,7 @@ body {
   background-color: var(--background-color);
   display: grid;
   grid-template-columns: 80px 1.8fr; 
-  grid-template-rows: 80px 1fr 1fr; 
+  grid-template-rows: 80px 1fr 2000px; 
   gap: 0px 0px; 
   grid-template-areas: 
     "sidebar header"
