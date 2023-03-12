@@ -64,13 +64,26 @@ body {
 
 .prudentialgrid {
   display: grid;
-  grid-template-columns: 80px 1.8fr; 
+  grid-template-columns: 0px 1.8fr; 
   grid-template-rows: 80px 1fr 2000px; 
   gap: 0px 0px; 
   grid-template-areas: 
     "sidebar header"
     "sidebar main"
     "sidebar footer"; 
+}
+
+@media (min-width: 1238px) {
+  .prudentialgrid {
+    display: grid;
+    grid-template-columns: 80px 1.8fr; 
+    grid-template-rows: 80px 1fr 2000px; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "sidebar header"
+      "sidebar main"
+      "sidebar footer"; 
+  }
 }
 
 header {
