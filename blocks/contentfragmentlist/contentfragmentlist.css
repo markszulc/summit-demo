@@ -1,7 +1,13 @@
 .article-item {
-    flex-basis: 350px;
+    flex-basis: 335px;
     margin: 0 0 2rem;
     padding-right: 14px;
+}
+
+@media (min-width: 1238px) {
+    .article-item {
+        flex-basis: 350px;
+    }
 }
 
 li {
@@ -22,6 +28,9 @@ li {
     align-items: flex-start;
     justify-content: space-between;
 }
+
+
+
 
 .article-item-image {
     width: 100%;

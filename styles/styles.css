@@ -267,10 +267,23 @@ main .section {
 
 @media (min-width: 900px) {
   .section > div {
-    max-width: 1238px;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    
     margin: auto;
   }
 }
+
+@media (min-width: 1238px) {
+  .section > div {
+    max-width: 1238px;
+    margin: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
 
 /* progressive section appearance */
 main .section[data-section-status='loading'],

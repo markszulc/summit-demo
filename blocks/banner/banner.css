@@ -2,11 +2,15 @@
     background-color: #001836;
     color: #fff;
     height: 500px;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .banner-wrapper {
     background-color: blue; 
     max-width: 100%  !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 .banner .container {
