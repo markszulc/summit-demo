@@ -8,6 +8,10 @@ main .hero-container {
   padding: 0;
   background: linear-gradient(90deg, rgba(240, 249, 255, 0.92) 0%, rgba(240, 249, 255, 0.7) 60%, rgba(240, 249, 255, 0) 70%);
 }
+
+main .hero-wrapper {
+  padding: 0;
+}
   
 main .hero {
   position: relative;
