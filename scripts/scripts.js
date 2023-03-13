@@ -155,6 +155,16 @@ async function loadLazy(doc) {
   sampleRUM('lazy');
   sampleRUM.observe(main.querySelectorAll('div[data-block-name]'));
   sampleRUM.observe(main.querySelectorAll('picture > img'));
+
+    // Load experimentation preview overlay
+    if (window.location.hostname === 'localhost' || window.location.hostname.endsWith('.hlx.page')) {
+      const preview = await import(`${window.hlx.codeBasePath}/tools/preview/preview.js`);
+      await preview.default();
+      if (window.hlx.experiment) {
+        const experimentation = await import(`${window.hlx.codeBasePath}/tools/preview/experimentation.js`);
+        experimentation.default();
+      }
+    }
 }
 
 /**
