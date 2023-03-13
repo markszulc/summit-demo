@@ -18,6 +18,16 @@ import {
 const LCP_BLOCKS = []; // add your LCP blocks to the list
 window.hlx.RUM_GENERATION = 'project-1'; // add your RUM generation information here
 
+// Define the custom audiences mapping for experimentation
+const EXPERIMENTATION_CONFIG = {
+  audiences: {
+    device: {
+      mobile: () => window.innerWidth < 600,
+      desktop: () => window.innerWidth >= 600,
+    },
+  },
+};
+
 /**
  * Builds hero block and prepends to main in a new section.
  * @param {Element} main The container element
