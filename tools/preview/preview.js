@@ -22,7 +22,7 @@ export function createButton(label) {
   const button = document.createElement('button');
   button.className = 'hlx-badge';
   const text = document.createElement('span');
-  text.innerHTML = label;
+  text.innerHTML = "Experiment: PRU0017";
   button.append(text);
   return button;
 }
@@ -48,8 +48,8 @@ export function createPopupDialog(header, items = []) {
   popup.className = 'hlx-popup hlx-hidden';
   popup.innerHTML = `
     <div class="hlx-popup-header">
-      <h5 class="hlx-popup-header-label">${typeof header === 'object' ? header.label : header}</h5>
-      ${header.description ? `<div class="hlx-popup-header-description">${header.description}</div>` : ''}
+      <h5 class="hlx-popup-header-label">Instant Experiment: PRU0017</h5>
+      <div class="hlx-popup-header-description">Active, Blocks: Banner<br>Showing results for 11k visits and 4.1k conversions: not yet enough data to determine a winner. Keep going for 29 days until you get 67k visits.</div>
       ${actions.length ? `<div class="hlx-popup-header-actions">${actions}</div>` : ''}
     </div>
     <div class="hlx-popup-items"></div>`;
@@ -78,7 +78,7 @@ export function createToggleButton(label) {
   button.setAttribute('aria-pressed', false);
   button.setAttribute('tabindex', 0);
   const text = document.createElement('span');
-  text.innerHTML = label;
+  text.innerHTML = "label";
   button.append(text);
   button.addEventListener('click', () => {
     button.setAttribute('aria-pressed', button.getAttribute('aria-pressed') === 'false');
