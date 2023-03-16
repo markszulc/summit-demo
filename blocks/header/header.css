@@ -19,7 +19,9 @@ header {
 }
 
 @media (min-width: 1238px) {
+  #nav {
   grid: auto-flow / 1fr 80px 715px 148px;
+  }
 }
 
   .nav-brand{
