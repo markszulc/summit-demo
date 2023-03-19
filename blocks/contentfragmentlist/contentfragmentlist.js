@@ -51,7 +51,7 @@ export default function decorate(block) {
                     cfElem.setAttribute("itemid", "urn:aemconnection:" + cf["_path"] + "/jcr:content/data/master");
                     cfElem.setAttribute("itemtype", "reference");
                     cfElem.setAttribute("itemfilter", "cf");
-                    const offer = '<a href="'+ctaUrl+'"><img class="article-item-image" src="'+imageUrl+'" alt="'+cf.headline+'" itemprop="primaryImage" itemtype="media"></a><div class="article-item-title" itemprop="headline" itemtype="text"><h5>'+cf.headline+'</h5></div><div class="article-item-desc" itemprop="main" itemtype="richtext">'+description+'</div>';
+                    const offer = '<img class="article-item-image" src="'+imageUrl+'" alt="'+cf.headline+'" itemprop="primaryImage" itemtype="media"><div class="article-item-title" itemprop="headline" itemtype="text"><h5>'+cf.headline+'</h5></div><div class="article-item-desc" itemprop="main" itemtype="richtext">'+description+'</div>';
                     cfElem.innerHTML = offer;
                     cfListBlock.appendChild(cfElem);
                 }
