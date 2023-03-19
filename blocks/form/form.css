@@ -264,12 +264,16 @@ main .form .button {
     content: " years";
 }
 
-.form-rate > output::before,
+
 .form-emi > output::before,
 .form-total > output::before,
 .form-loanAmount > div > .range-min::before,
 .form-loanAmount > div > .range-max::before {
     content: "$";
+}
+
+.form-rate > output::after {
+    content: "%";
 }
 
 .form-rate > div > .range-min::after,
