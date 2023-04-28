@@ -12,8 +12,6 @@ export default function decorate(block) {
         cfPersistedQuery = cfPersistedQuery.replace("publish", "author");
         options = {credentials: "include"};
     }
-    // const myurl = "https://author-p55117-e571178.adobeaemcloud.com/graphql/execute.json/frescopa/ArticleList";
-    console.log(cfPersistedQuery.trim());
 
     const cfReq = fetch(cfPersistedQuery.trim()+"?ts="+Math.random()*1000, options)
     .then((response) => response.json())
