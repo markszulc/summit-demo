@@ -10,7 +10,7 @@ export default function decorate(block) {
     if(window.location.ancestorOrigins.length > 0) {
         console.log("Using Author");
         cfPersistedQuery = cfPersistedQuery.replace("publish", "author");
-        options = {credentials: "include"}};
+        options = {credentials: "include"};
     }
 
     const cfReq = fetch(cfPersistedQuery+"?ts="+Math.random()*1000, options)
